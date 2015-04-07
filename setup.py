@@ -1,19 +1,25 @@
 #!/usr/bin/env python
 
-import distribute_setup
-# User may not have setuptools installed on their machines.
-# This script will automatically install the right version from PyPI.
-distribute_setup.use_setuptools()
-import setuptools
+try:
+  import distribute_setup
+  # User may not have setuptools installed on their machines.
+  # This script will automatically install the right version from PyPI.
+  distribute_setup.use_setuptools()
+except ImportError:
+  pass
+try:
+  from setuptools import setup
+except ImportError:
+  from distutils.core import setup
 
-setuptools.setup(
+setup(
   name='numparser',
-  packages=setuptools.find_packages(),
+  packages=['numparser'],
   description='Python library for parsing numbers from strings.',
   long_description='''Python library for parsing numbers from strings.
 Originally meant to be used to process results from Named Entity Recognizer.
 For more description visit https://github.com/sadovnychyi/numparser''',
-  version='0.0.1',
+  version='0.0.2dev1',
   url='https://github.com/sadovnychyi/numparser',
   author='Dmitry Sadovnychyi',
   author_email='numparser@dmit.ro',
