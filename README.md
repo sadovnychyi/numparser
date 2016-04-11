@@ -16,6 +16,8 @@ Fifty-two Million Five HundredThousand Dollars | 52,500,000
 less than $5,000,000.00 (five million dollars  | 5,000,000
 $50 million   $160,000                         | 50,160,000
 
+Note that [short scale](https://en.wikipedia.org/wiki/Long_and_short_scales) is used and currently there's no support for [long scale](https://en.wikipedia.org/wiki/Long_and_short_scales).
+
 
 Installation
 ============
